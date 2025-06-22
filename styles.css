@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(0, 48, 39), rgb(0, 150, 90));
+
+
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    filter: blur(0px );
+    border-radius: 20px;
+    box-shadow: 10px 23px 20px 50px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.todo-app h1{
+    font-size: 2rem;
+background: linear-gradient(135deg, rgb(5, 30, 25), rgb(0, 100, 80));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+H2{
+    
+    margin-right: 50px;
+}
+
+.stat-container {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.details{
+    width: 100%;
+}
+.details h3{
+    color: #28a745;
+}
+#progressbar{
+    width: 100%;
+    height: 7px;
+    background: #000;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+
+}
+#progress {
+    width: 0%;
+    height: 100%;
+    background: lawngreen;
+    border-radius: 20px;
+    transition: witdh 0.3s ease;
+}
+
+#numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #28a745;
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.input-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.input-area input{
+    flex: 1;
+    padding: 10px 17px;
+    border: none;
+    outline: none;
+    color: #000;
+    border-bottom: 2px solid #000;
+    background-color: color;
+    font-size: 1rem;
+    
+}
+
+.input-area input::placeholder{
+    color: #bcbcbc;
+}
+.input-area button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 10px;
+   padding: 8px;
+    border-radius: 50%; 
+    background-color: #28a745;
+    border: 2px solid #28a745;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}         
+.input-area button:hover{
+    transform: scale(1.1);
+    background-color: #218838;
+    transition: all 0.3s ease;
+}  
+.todos-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#task-list{
+    width: 100%;
+}
+#task-list li{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+
+    font-size: 1.2rem;
+    color: color;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+#task-list li:hover{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#task-list li .checkbox{
+    min-width: 30px;
+    height: 2px solid rgba(255, 194, 209, 0.3);
+    background: transparent;
+    border: 2px  solid #000;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#task-list li .checkbox:checked{
+    background: #28a745;
+    transform: scale(1.1);
+}
+#task-list li .checkbox:checked::before{
+    content: '\2713';
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+
+}
+#task-list li span{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+#task-list li span.completed{
+    text-decoration: 2px line-through #000;
+    color: #6c757d;
+}
+
+.task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.task-buttons button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-buttons button:hover{
+    transform: scale(1.2);
+    background-color: #c82333;
+    transition: all 0.3s ease;
+}
+
+.task-buttons .delete-btn{
+    background-color: orange;
+}
