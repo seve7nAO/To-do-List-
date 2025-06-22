@@ -38,7 +38,7 @@ body{
 }
 .todo-app h1{
     font-size: 2rem;
-background: linear-gradient(135deg, rgb(5, 30, 25), rgb(0, 100, 80));
+   background: linear-gradient(135deg, rgb(5, 30, 25), rgb(0, 100, 80));
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
